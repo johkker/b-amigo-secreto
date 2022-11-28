@@ -1,0 +1,33 @@
+{
+  "name": "amigo-secreto",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --files src/venom-bot.ts",
+    "start": "node dist/app.js",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.9",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "celery-node": "^0.5.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "pg": "^8.8.0",
+    "reflect-metadata": "^0.1.13",
+    "sucrase": "^3.29.0",
+    "typeorm": "^0.3.10",
+    "venom-bot": "^4.3.6",
+    "yup": "^0.32.11"
+  }
+}
