@@ -1,2 +1,3 @@
-2022/11/28-15:09:22.813 71ed Creating DB /home/johnny/Projetos/amigo-secreto/tokens/amigo-secreto/Default/Local Storage/leveldb since it was missing.
-2022/11/28-15:09:22.825 71ed Reusing MANIFEST /home/johnny/Projetos/amigo-secreto/tokens/amigo-secreto/Default/Local Storage/leveldb/MANIFEST-000001
+2022/12/13-20:09:51.748 dcaf Reusing MANIFEST /home/johnny/Projetos/amigo-secreto/tokens/amigo-secreto/Default/Local Storage/leveldb/MANIFEST-000001
+2022/12/13-20:09:51.749 dcaf Recovering log #9
+2022/12/13-20:09:51.749 dcaf Reusing old log /home/johnny/Projetos/amigo-secreto/tokens/amigo-secreto/Default/Local Storage/leveldb/000009.log 

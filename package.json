@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --files src/venom-bot.ts",
+    "dev": "ts-node-dev --files src/app.ts",
     "start": "node dist/app.js",
     "typeorm": "typeorm-ts-node-commonjs",
     "build": "tsc"
@@ -27,7 +27,7 @@
     "reflect-metadata": "^0.1.13",
     "sucrase": "^3.29.0",
     "typeorm": "^0.3.10",
-    "venom-bot": "^4.3.6",
+    "venom-bot": "^4.3.7",
     "yup": "^0.32.11"
   }
 }

@@ -9,7 +9,7 @@ export const Database = new DataSource({
   ssl:
     process.env.NODE_ENV === 'production'
       ? { rejectUnauthorized: false }
-      : false,
+      : true,
   synchronize: false,
   logging: true,
   entities:
