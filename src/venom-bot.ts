@@ -1,4 +1,4 @@
-import { create, Whatsapp } from 'venom-bot';
+import { Whatsapp } from 'venom-bot';
 import { Group } from './entities';
 import GlobalError from './errors';
 
@@ -17,9 +17,9 @@ export const createGroup = async (client: Whatsapp, group: Group) => {
   const firstGroupMessage = await client.sendText(
     newGroup.gid._serialized,
     `Olá! Seja bem vindo ao amigo secreto "${group.name}"!
-	  Para facilitar a vida de todos, o amigo secreto será feito por meio de mensagens. Estou fazendo o sorteio e estarei enviando no privado para cada um de vocês.
-		Lembrando: o valor máximo do presente é de R$${group.value},00 e a data limite para entrega é ${group.endDate}.
-	  Boas festas!`
+	Para facilitar a vida de todos, o amigo secreto será feito por meio de mensagens. Estou fazendo o sorteio e estarei enviando no privado para cada um de vocês.
+	Lembrando: o valor máximo do presente é de R$${group.value} e a data limite para entrega é ${group.endDate}.
+	Boas festas!`
   );
 
   if (!firstGroupMessage)
@@ -58,6 +58,14 @@ export const createGroup = async (client: Whatsapp, group: Group) => {
           'Algo aconteceu ao enviar o contato do sorteado para um dos participantes do amigo secreto',
           500
         );
+      await client.sendText(
+        contactNumber,
+        'E aí, gostou do serviço? Se sim, e tu puder, me ajuda a manter o projeto ativo? Qualquer valor é bem vindo!'
+      );
+      await client.sendText(
+        contactNumber,
+        'Meu pix é o *CNPJ* 45493265000107. Muito obrigado! Boas festas :)'
+      );
     })
   );
   await client.promoteParticipant(
@@ -67,7 +75,7 @@ export const createGroup = async (client: Whatsapp, group: Group) => {
 
   const secondGroupMessage = await client.sendText(
     newGroup.gid._serialized,
-    `@${group.users[0].number} é agora o administrador do grupo, escolhido de forma aleatória! Até mais! :)`
+    `@${group.users[0].number} é agora o admin do grupo! Escolhi de forma aleatória, ok? :)`
   );
 
   if (!secondGroupMessage)
