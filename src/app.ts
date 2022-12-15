@@ -16,7 +16,11 @@ const client = async () =>
     headless: true, // Headless chrome
     folderNameToken: './src/tokens', //folder name when saving tokens
     mkdirFolderToken: './src/tokens',
-    useChrome: true,
+    useChrome: false,
+    puppeteerOptions: {
+      ignoreDefaultArgs: ['--disable-extensions'],
+      args: ['--use-gl=egl'],
+    },
   });
 
 export const newClient = client();

@@ -7,6 +7,8 @@ processes = []
 
 [env]
   PORT = "8080"
+  NODE_ENV="production"
+  DATABASE_URL="postgres://johkker:8bkWnYvLpA3B@ep-long-fog-285103.us-east-2.aws.neon.tech/neondb"
 
 [experimental]
   allowed_public_ports = []
