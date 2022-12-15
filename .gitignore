@@ -3,3 +3,5 @@ tokens
 tokens/*
 dist
 dist/*
+.env
+
