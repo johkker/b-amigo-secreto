@@ -1,7 +1,5 @@
 node_modules
-.env
 tokens
 tokens/*
-fly.toml
 dist
 dist/*
