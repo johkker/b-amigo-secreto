@@ -2,6 +2,8 @@ require('express-async-errors');
 import express from 'express';
 import { create } from 'venom-bot';
 import routes from './routes';
+import * as fs from 'fs';
+import * as https from 'https';
 
 const app = express();
 
@@ -23,6 +25,12 @@ const client = async () =>
     },
   });
 
+const options = {
+  key: fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('cert.pem'),
+};
+
 export const newClient = client();
 
-app.listen(process.env.PORT || 443);
+https.createServer(options, app).listen(443);
+// app.listen(process.env.PORT || 443);
