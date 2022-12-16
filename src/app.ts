@@ -25,12 +25,6 @@ const client = async () =>
     },
   });
 
-const options = {
-  key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('cert.pem'),
-};
-
 export const newClient = client();
 
-https.createServer(options, app).listen(443);
-// app.listen(process.env.PORT || 443);
+app.listen(process.env.PORT || 3000);
